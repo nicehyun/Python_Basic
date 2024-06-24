@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+<<<<<<< HEAD
+    <option name="sdkName" value="Python 3.12 (OOP)" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (OOP)" project-jdk-type="Python SDK" />
+=======
+    <option name="sdkName" value="Python 3.12 (CoffeMachine)" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (CoffeMachine)" project-jdk-type="Python SDK" />
+>>>>>>> 9738635abb1d680fc0e194713c98d4c183e26210
+</project>

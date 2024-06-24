@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/.idea/OOP.iml" filepath="$PROJECT_DIR$/.idea/OOP.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/CoffeMachine.iml" filepath="$PROJECT_DIR$/.idea/CoffeMachine.iml" />
+>>>>>>> 9738635abb1d680fc0e194713c98d4c183e26210
+    </modules>
+  </component>
+</project>
