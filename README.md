@@ -6,3 +6,4 @@
 5. [🐢 Turtle Race](https://github.com/nicehyun/Python_Basic/tree/Turtle_Race)
 6. [🐍 Snake Game](https://github.com/nicehyun/Python_Basic/tree/Snake_Game)
 7. [🏓 Pong Game](https://github.com/nicehyun/Python_Basic/tree/Pong_Game)
+8. [🚸 Turtle Crossing Game](https://github.com/nicehyun/Python_Basic/tree/Turtle_Crossing_Game)
