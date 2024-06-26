@@ -5,3 +5,4 @@
 4. [🎨 Demien Hirst Dot - Turtle](https://github.com/nicehyun/Python_Basic/tree/Demaien_Hirst_Dot-Turtle)
 5. [🐢 Turtle Race](https://github.com/nicehyun/Python_Basic/tree/Turtle_Race)
 6. [🐍 Snake Game](https://github.com/nicehyun/Python_Basic/tree/Snake_Game)
+7. [🏓 Pong Game](https://github.com/nicehyun/Python_Basic/tree/Pong_Game)
