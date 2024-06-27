@@ -8,3 +8,4 @@
 7. [🏓 Pong Game](https://github.com/nicehyun/Python_Basic/tree/Pong_Game)
 8. [🚸 Turtle Crossing Game](https://github.com/nicehyun/Python_Basic/tree/Turtle_Crossing_Game)
 9. [📩 Mail Merger](https://github.com/nicehyun/Python_Basic/tree/Mail_Merge)
+10. [🇺🇸 U.S. States](https://github.com/nicehyun/Python_Basic/tree/US_States_X_Turtle)
