@@ -10,7 +10,8 @@ RIGHT = 0
 
 class Snake():
     def __init__(self):
-        self.segments = [self.create_segment(position) for position in STARTING_POSITIONS]
+        self.segments = []
+        self.add_segments()
         self.head = self.segments[0]
 
     def create_segment(self, position):
@@ -20,6 +21,9 @@ class Snake():
         new_snake.color("white")
         new_snake.goto(position)
         return new_snake
+
+    def add_segments(self):
+        self.segments.extend([self.create_segment(position) for position in STARTING_POSITIONS])
 
     def extend(self):
         current_tail = self.segments[-1]
@@ -51,3 +55,10 @@ class Snake():
     def left(self):
         if self.head.heading() != RIGHT:
             self.head.setheading(LEFT)
+
+    def reset(self):
+        for segment in self.segments:
+            segment.goto(1000, 1000)
+        self.segments.clear()
+        self.add_segments()
+        self.head = self.segments[0]
