@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import messagebox as mb
 from random import randint, choice, shuffle
 import pyperclip
+import json
 
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
@@ -37,21 +38,57 @@ def save():
     website_text = website_input.get()
     email_text = email_input.get()
     password_text = password_input.get()
+    new_data = {
+        website_text: {
+            "email": email_text,
+            "password": password_text
+        }
+    }
 
     if len(website_text) == 0 or len(email_text) == 0 or len(password_text) == 0:
         mb.showinfo(title="Oops", message="Please enter all the fields")
         return
 
-    is_ok = mb.askokcancel(title=website_text,
-                           message=f"These are the details entered: \nEmail: {email_text} \nPassword: {password_text} \nIs it ok to save?")
-    if is_ok:
-        separator = " | "
-        with open("data.txt", "a") as file:
-            file.write(f"{website_text}{separator}{email_text}{separator}{password_text}\n")
+    try:
+        with open("data.json", "r") as file:
+            data = json.load(file)
+    except FileNotFoundError:
+        data = {}
+    finally:
+        data.update(new_data)
+        with open("data.json", "w") as file:
+            json.dump(data, file, indent=4)
 
-        website_input.delete(0, END)
-        password_input.delete(0, END)
-        website_input.focus()
+    website_input.delete(0, END)
+    password_input.delete(0, END)
+    website_input.focus()
+
+
+# ---------------------------- FIND PASSWORD ------------------------------- #
+def find_password():
+    website_text = website_input.get()
+    email_text = email_input.get()
+    if website_text == "" or email_text == "":
+        mb.showinfo(title="Error", message="웹사이트와 이메일을 입력해주세요.")
+        return
+
+    try:
+        with open("data.json", "r") as file:
+            data = json.load(file)
+    except FileNotFoundError:
+        mb.showinfo(title="Error", message="No Data File Found.")
+    else:
+        if website_text not in data:
+            mb.showinfo(title="Error", message=f"No details for {website_text} exists")
+            return
+
+        email = data[website_text]["email"]
+        if email != email_text:
+            mb.showinfo(title="Error", message=f"No details for {email_text} exists")
+            return
+
+        password = data[website_text]["password"]
+        mb.showinfo(title=website_text, message=f"email: {email}\npassword: {password}")
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -73,9 +110,9 @@ email_label.grid(row=2, column=0)
 password_label = Label(text="Password:")
 password_label.grid(row=3, column=0)
 
-website_input = Entry(width=35)
+website_input = Entry(width=21)
 website_input.focus()
-website_input.grid(row=1, column=1, columnspan=2)
+website_input.grid(row=1, column=1)
 
 email_input = Entry(width=35)
 email_input.grid(row=2, column=1, columnspan=2)
@@ -89,5 +126,8 @@ generate_button.grid(row=3, column=2)
 
 add_button = Button(text="Add", width=36, command=save)
 add_button.grid(row=4, column=1, columnspan=2)
+
+search_button = Button(text="Search", command=find_password)
+search_button.grid(row=1, column=2)
 
 window.mainloop()
