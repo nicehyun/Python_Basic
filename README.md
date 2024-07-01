@@ -13,3 +13,4 @@
 12. [📏 Miles to Km Converter](https://github.com/nicehyun/Python_Basic/tree/Miles_to_Km_Converter)
 13. [🍅 Pomodoro](https://github.com/nicehyun/Python_Basic/tree/Pomodoro)
 14. [🔐 Password Manager](https://github.com/nicehyun/Python_Basic/tree/Password_Manager)
+15. [📑 Flashy Cards](https://github.com/nicehyun/Python_Basic/tree/Flashy_Cards)
