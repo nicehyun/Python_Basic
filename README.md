@@ -17,3 +17,4 @@
 16. [🛰️ ISS Over Head](https://github.com/nicehyun/Python_Basic/tree/ISS_OVERHEAD)
 17. [🤔 Quizzler](https://github.com/nicehyun/Python_Basic/tree/Quizzler)
 18. [🍿 Top 100 Movies](https://github.com/nicehyun/Python_Basic/tree/Top_100_Movies)
+19. [🧐 대학 전공과 연봉 상관관계](https://github.com/nicehyun/Python_Basic/tree/Relationship_College_Major_And_Salaries)
